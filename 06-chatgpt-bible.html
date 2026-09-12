@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>調べる。書く。画像まで作る。｜AIマネタイズ特典</title><style>:root{--primary-text:#1a2870;--primary-deep:#131c49;--primary-soft:#eceef8;--primary-shape:#2644d9;--accent-text:#685a12;--accent-deep:#4e4413;--accent-soft:#f9f7eb;--accent-shape:#e4c425;--accent-on-dark:#f1ecd0}
+*{box-sizing:border-box}
+html{background:#eef0f3;color:#20242a;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;font-feature-settings:"palt"}
+body{margin:0}
+.book{--ink:#20242a;--muted:#606873;--line:#d9dde3;--paper:#fff;--wash:#f6f7f8;max-width:760px;margin:auto;background:var(--paper);box-shadow:0 0 45px rgba(14,22,33,.09);word-break:keep-all;overflow-wrap:break-word}
+.phrase{display:inline}
+.unit{display:inline-block;white-space:nowrap}
+a{color:inherit}
+img{display:block;width:100%;height:auto}
+figure{margin:0}
+figcaption,.image-note{font-size:13px;line-height:1.6;color:var(--muted)}
+h1,h2,h3,h4,p,blockquote{margin-top:0}
+h1{font-size:clamp(30px,8.5vw,58px);line-height:1.28;letter-spacing:-.035em}
+h2{font-size:clamp(25px,6.7vw,42px);line-height:1.4;letter-spacing:-.025em}
+h3{font-size:clamp(20px,5vw,29px);line-height:1.5}
+h4{font-size:18px;line-height:1.55}
+p,dd{font-size:16px;line-height:1.85}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 20px;border-bottom:1px solid var(--line);font-size:14px;font-weight:800}
+.topbar a{padding:7px 11px;border:1px solid var(--line);border-radius:999px;text-decoration:none}
+.cover{position:relative}
+.cover figure figcaption{padding:8px 18px}
+.cover>div{position:relative;margin:-42px 20px 0;padding:24px;background:#fff;border-top:7px solid var(--primary-shape);box-shadow:0 12px 30px rgba(20,30,40,.12)}
+.cover>div>span{display:block;margin-bottom:10px;color:var(--primary-text);font-size:14px;font-weight:850}
+.cover h1{margin:0}
+.income-overview{margin:48px 20px;padding:28px;background:var(--primary-deep);color:#fff}
+.income-overview h2{margin-bottom:22px;font-size:clamp(22px,5.8vw,34px)}
+.income-overview ol{display:grid;gap:14px;margin:0;padding:0;list-style:none}
+.income-overview li{display:grid;grid-template-columns:38px minmax(0,1fr);gap:12px;align-items:start}
+.income-overview li>span{display:grid;place-items:center;width:36px;height:36px;border:2px solid var(--accent-shape);border-radius:50%;font-size:14px;font-weight:900}
+.income-overview strong{display:block;font-size:16px}
+.income-overview p{margin:3px 0 0;color:#eef1f5;font-size:15px}
+.route-exchange ol{grid-template-columns:repeat(3,minmax(0,1fr))}
+.route-exchange li{display:block;border-left:2px solid var(--accent-shape);padding-left:12px}
+.route-handoff{border-radius:2px 28px 2px 2px}
+.route-audience-path li:not(:last-child),.route-two-routes li:not(:last-child){border-bottom:1px dashed rgba(255,255,255,.35);padding-bottom:14px}
+.route-broker ol{background:#fff;color:var(--ink);padding:15px}
+.route-broker p{color:var(--muted)}
+.route-reader-book{border-left:12px double var(--accent-shape)}
+.route-image-shelf ol{grid-template-columns:repeat(3,minmax(0,1fr))}
+.route-image-shelf li{display:block}
+.route-product-bundle{box-shadow:10px 10px 0 var(--accent-soft)}
+.route-input-output ol,.route-service-lane ol{border-left:3px solid var(--accent-shape);padding-left:16px}
+.concern{display:grid;margin:58px 20px;background:var(--wash)}
+.concern-question{padding:28px}
+.concern-question h2{margin-bottom:22px}
+.concern-question p{margin:9px 0;padding:11px 14px;background:#fff;border-left:4px solid var(--primary-shape)}
+.ai-answer{padding:28px;background:var(--accent-soft);border-top:1px solid var(--line)}
+.ai-answer>span{display:block;margin-bottom:10px;color:var(--accent-text);font-size:13px;font-weight:900}
+.ai-answer>strong{display:block;font-size:20px;line-height:1.65}
+.concern-design-concern{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr)}
+.concern-work-barriers{border-top:8px solid var(--primary-shape)}
+.concern-post-stoppers .concern-question p:nth-of-type(2){margin-left:28px}
+.concern-beauty-question{border-radius:34px 4px 34px 4px}
+.concern-blank-page{background:linear-gradient(90deg,var(--wash) 0 76%,var(--primary-soft) 76%)}
+.concern-gallery-question{border:1px solid var(--line);background:#fff}
+.concern-daily-work{box-shadow:-10px 10px 0 var(--primary-soft)}
+.concern-chat-question .ai-answer{border-left:6px solid var(--accent-shape)}
+.concern-repeat-task{border:2px dashed var(--primary-shape)}
+.concern-story-question{background:var(--primary-deep);color:#fff}
+.concern-story-question .concern-question p{color:var(--ink)}
+.media-stage{margin:58px 20px}
+.media-stage>h2{padding-left:18px;border-left:6px solid var(--accent-shape)}
+.media-stage figure{position:relative}
+.media-stage figcaption{padding:8px 3px}
+.media-labels{display:grid;grid-template-columns:repeat(var(--media-cols,3),minmax(0,1fr));gap:1px;background:var(--line)}
+.media-labels>span{display:block;min-width:0;padding:13px 8px;background:#fff;color:var(--primary-text);font-size:13px;font-weight:800;text-align:center}
+.media-portfolio{padding:16px;background:var(--primary-soft);transform:rotate(-.35deg)}
+.media-delivery-file figure{border:1px solid var(--line);padding:12px;box-shadow:8px 8px 0 var(--primary-soft)}
+.media-reel-preview figure{border-radius:26px;padding:9px;background:#181b20;color:#fff}
+.media-beauty-spread{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0}
+.media-article-jacket{padding-left:34px;border-left:12px solid var(--primary-deep)}
+.media-collection figure{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);gap:10px}
+.media-collection img{grid-row:span 2}
+.media-template-preview{background:var(--accent-soft);padding:18px}
+.media-output-samples{border:2px solid var(--ink);padding:6px}
+.media-file-output figure:before{content:"";display:block;width:34%;height:8px;background:var(--primary-shape)}
+.media-film-still{background:#111;padding:12px;color:#fff}
+.cafe-banner{position:relative}
+.cafe-banner>div{position:absolute;left:5%;right:5%;bottom:8%;padding:16px;background:rgba(17,22,28,.86);color:#fff}
+.cafe-banner>div>span,.cafe-banner>div>strong{display:block}
+.cafe-banner strong{font-size:25px}
+.chapter-outline{margin:70px 20px;padding:22px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.chapter-outline>strong{font-size:14px;color:var(--primary-text)}
+.chapter-outline ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:18px 0 0;padding:0;list-style:none}
+.chapter-outline li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:start;font-size:14px;font-weight:750}
+.chapter-outline li>span{display:grid;place-items:center;width:27px;height:27px;background:var(--primary-deep);color:#fff;border-radius:50%}
+.chapter{margin-top:80px}
+.chapter h2{margin:0}
+.atlas-lede{display:grid;grid-template-columns:minmax(0,1fr) 72px;gap:10px;margin:0 20px 30px;padding:28px 0;border-top:9px solid var(--primary-shape)}
+.atlas-lede>span{grid-column:1;color:var(--primary-text);font-size:14px;font-weight:850}
+.atlas-lede>b{grid-column:2;grid-row:1/3;font-size:60px;line-height:1;color:var(--primary-soft);text-align:right}
+.atlas-field{display:grid;gap:0;background:linear-gradient(90deg,var(--primary-soft) 0 9px,#fff 9px);padding-left:9px}
+.bench-head{margin:0 20px 26px;padding:28px;background:var(--primary-deep);color:#fff}
+.bench-head>b{display:block;color:var(--accent-shape);font-size:15px}
+.bench-head>span{display:block;margin:10px 0;color:#eef2f6;font-size:14px;font-weight:800}
+.bench-stream{display:grid;gap:36px;padding:0 20px}
+.finish-heading{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;margin:0 20px 32px;padding-bottom:20px;border-bottom:3px solid var(--accent-shape)}
+.finish-heading>div>span{display:block;margin-bottom:8px;color:var(--accent-text);font-size:14px;font-weight:850}
+.finish-heading>b{color:var(--accent-soft);font-size:76px;line-height:.9}
+.finish-path{display:grid;gap:42px;padding:32px 20px;background:var(--wash)}
+.topic-title{margin-bottom:20px;color:var(--primary-text)}
+.atlas-field>section,.atlas-field>.cafe-study,.atlas-field>.work-block,.atlas-field>.income-block,.atlas-field>.angle-board,.atlas-field>.scope-blueprint,.atlas-field>.official-links{padding:34px 24px;border-bottom:1px solid var(--line)}
+.contrast-unit,.mapping-unit,.process-unit,.hub-unit,.reuse-unit,.equation-unit,.pipeline-unit,.hierarchy-unit,.audio-unit{min-width:0}
+.contrast-head{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));background:var(--primary-deep);color:#fff}
+.contrast-head strong{padding:13px;text-align:center}
+.contrast-rows{border:1px solid var(--line);border-top:0}
+.contrast-row{display:grid;grid-template-columns:minmax(92px,.75fr) repeat(2,minmax(0,1fr));border-top:1px solid var(--line)}
+.contrast-row:first-child{border-top:0}
+.contrast-row>*{padding:14px;min-width:0}
+.contrast-row>div{border-left:1px solid var(--line);font-size:15px;line-height:1.7}
+.facet{color:var(--primary-text);font-size:13px;font-weight:850}
+.mapping-legend{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));color:var(--muted);font-size:13px;font-weight:800}
+.mapping-legend>span:last-child{text-align:right}
+.mapping-unit dl{margin:12px 0 0}
+.mapping-unit dl>div{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:18px;padding:16px 0;border-top:1px solid var(--line)}
+.mapping-unit dt{font-size:15px;font-weight:800}
+.mapping-unit dd{display:grid;grid-template-columns:22px minmax(0,1fr);gap:6px;margin:0}
+.mapping-unit dd>span{color:var(--accent-text)}
+.process-unit ol{position:relative;display:grid;gap:17px;margin:0;padding:0;list-style:none}
+.process-unit ol:before{content:"";position:absolute;top:18px;bottom:18px;left:18px;width:2px;background:var(--primary-shape)}
+.process-unit li{position:relative;display:grid;grid-template-columns:38px minmax(0,1fr);gap:14px}
+.step-index{z-index:1;display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#fff;border:2px solid var(--primary-shape);color:var(--primary-text);font-size:13px;font-weight:900}
+.process-unit li strong{display:block}
+.process-unit li p{margin:3px 0 0}
+.hub-core{display:grid;place-items:center;min-height:110px;padding:20px;background:var(--primary-deep);color:#fff;text-align:center}
+.hub-rays{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px}
+.hub-rays>div{padding:16px;background:var(--primary-soft)}
+.hub-rays>div>strong,.hub-rays>div>span{display:block}
+.hub-rays>div>span{margin-top:7px;font-size:14px;line-height:1.65}
+.reuse-source{padding:18px;border:2px solid var(--primary-shape);text-align:center}
+.reuse-source>span,.reuse-source>strong{display:block}
+.reuse-source>span{font-size:13px;color:var(--muted)}
+.reuse-branches{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:16px}
+.reuse-branches>div{padding:14px;background:var(--accent-soft);border-top:5px solid var(--accent-shape)}
+.reuse-branches p{margin:5px 0 0;font-size:14px}
+.reuse-branches .variant-arrow{display:block;color:var(--accent-text);font-weight:900}
+.reuse-branches b{display:block}
+.equation-strip{display:flex;align-items:stretch;gap:8px}
+.equation-strip>div,.equation-strip>b{display:flex;flex:1;flex-direction:column;justify-content:center;min-width:0;padding:16px;background:var(--primary-soft)}
+.equation-strip>div>.equation-detail{font-size:14px}
+.equation-strip>b{background:var(--accent-deep);color:#fff}
+.math-sign{align-self:center;font-size:24px}
+.data-before,.data-after{padding:18px;border:1px solid var(--line);background:#fff}
+.data-before>span,.data-after>span{display:block;margin-bottom:10px;color:var(--primary-text);font-size:13px;font-weight:850}
+.data-before>div,.data-after>div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;padding:8px 0;border-top:1px dashed var(--line)}
+.data-after>div{grid-template-columns:minmax(0,1fr) auto auto}
+.data-after i{color:var(--accent-shape);font-style:normal;letter-spacing:3px}
+.data-after p{margin:13px 0 0;text-align:right}
+.pipeline-arrow{padding:10px;text-align:center;color:var(--primary-text);font-weight:900}
+.pipeline-arrow>span{display:block;font-size:13px}
+.reading-order{display:grid;gap:10px}
+.reading-order>div{display:grid;grid-template-columns:76px minmax(0,1fr);align-items:center;gap:16px;padding:calc(11px + var(--rank)*3px) 16px;border-left:calc(7px - var(--rank)*2px) solid var(--primary-shape);background:var(--primary-soft)}
+.reading-order>div>span{font-size:13px;color:var(--muted)}
+.time-axis{display:grid;grid-template-columns:repeat(3,1fr);font-size:13px;color:var(--muted)}
+.time-axis>span:nth-child(2){text-align:center}
+.time-axis>span:last-child{text-align:right}
+.audio-track{display:grid;grid-template-columns:minmax(80px,.45fr) minmax(100px,1fr) minmax(110px,.75fr);gap:12px;align-items:center;padding:14px 0;border-top:1px solid var(--line)}
+.audio-track>span{font-size:14px}
+.wave{display:flex;align-items:center;justify-content:space-around;height:36px;background:var(--primary-soft)}
+.wave i{width:3px;height:var(--wave,18px);background:var(--primary-shape)}
+.wave i:nth-child(2){height:28px}
+.wave i:nth-child(3){height:11px}
+.lesson-take{margin:20px 0 0;padding:14px 16px;border-left:4px solid var(--accent-shape);background:var(--accent-soft);font-weight:750}
+.source-example{margin-top:18px;border-top:1px solid var(--accent-shape);padding-top:14px}
+.example-tab{display:inline-block;padding:6px 10px;background:var(--accent-deep);color:#fff;font-size:13px;font-weight:850}
+.example-lines{display:grid;gap:0}
+.example-line{display:grid;grid-template-columns:minmax(90px,.55fr) minmax(0,1.45fr);gap:12px;padding:12px 0;border-bottom:1px dashed var(--line)}
+.example-line strong{color:var(--accent-text);font-size:14px}
+.example-line>div{font-size:15px;line-height:1.7}
+.work-block{background:var(--primary-soft)}
+.work-block>h3,.income-block>h3,.angle-board>h3,.scope-blueprint>h3{margin-bottom:18px}
+.tool-ledger{display:grid;gap:1px;background:var(--line)}
+.tool-ledger>div{display:grid;grid-template-columns:minmax(110px,.55fr) minmax(0,1.45fr);gap:14px;padding:14px;background:#fff}
+.tool-ledger strong{color:var(--primary-text)}
+.tool-ledger>div>span{font-size:15px;line-height:1.7}
+.human-note{margin:15px 0 0;font-size:14px}
+.voice-note{margin-bottom:22px;padding:18px;background:#fff;border-left:7px solid var(--accent-shape)}
+.voice-note blockquote{font-size:18px;line-height:1.75;font-weight:750}
+.voice-note ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0;padding:0;list-style:none}
+.voice-note li{display:grid;gap:6px;padding:10px;background:var(--accent-soft)}
+.voice-note li>span{font-size:13px;color:var(--accent-text)}
+.two-work-paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:22px}
+.two-work-paths>section{padding:16px;background:#fff}
+.two-work-paths>section>div{display:grid;grid-template-columns:72px minmax(0,1fr);gap:10px;padding:11px 0;border-top:1px solid var(--line)}
+.two-work-paths>section>div>span{font-size:14px;line-height:1.65}
+.income-block{padding:28px 0}
+.income-block>p{max-width:620px}
+.income-methods{display:grid;gap:28px}
+.income-method{border:1px solid var(--line);background:#fff}
+.income-method>header{display:grid;grid-template-columns:46px minmax(0,1fr);align-items:center;background:var(--primary-deep);color:#fff}
+.income-method>header>span{padding:16px;color:var(--accent-shape);font-size:14px;font-weight:900}
+.income-method h4{margin:0;padding:16px;border-left:1px solid rgba(255,255,255,.3)}
+.value-chain{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line)}
+.value-chain>div{padding:14px;background:var(--primary-soft)}
+.value-chain small,.value-chain strong{display:block}
+.value-chain small{font-size:13px;color:var(--primary-text);font-weight:850}
+.value-chain strong{margin-top:6px;font-size:14px;line-height:1.65}
+.income-method dl{margin:0;padding:0 16px}
+.income-method dl>div{display:grid;grid-template-columns:minmax(100px,.55fr) minmax(0,1.45fr);gap:12px;padding:13px 0;border-top:1px dashed var(--line)}
+.income-method dt{font-size:13px;color:var(--primary-text);font-weight:850}
+.income-method dd{margin:0;font-size:15px}
+.angle-board>div{display:grid;grid-template-columns:minmax(0,.55fr) minmax(0,.9fr) minmax(0,1fr);gap:0;border-top:1px solid var(--line)}
+.angle-board>div>*{padding:15px}
+.angle-board>div>span{font-size:15px}
+.angle-board>div>b{background:var(--accent-soft);font-size:15px}
+.scope-blueprint{border:2px solid var(--primary-deep)}
+.format-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.format-pair>div{padding:16px;background:var(--primary-soft)}
+.format-pair>div>strong,.format-pair>div>span,.scope-lane>div>strong,.scope-lane>div>span{display:block}
+.format-pair>div>span,.scope-lane>div>span{margin-top:6px;font-size:14px;line-height:1.7}
+.scope-lane{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin-top:18px;background:var(--line)}
+.scope-lane>div{padding:16px;background:#fff}
+.scope-blueprint>p{margin:18px 0 0}
+.official-links{background:var(--accent-soft)}
+.official-links>div{display:flex;flex-wrap:wrap;gap:10px}
+.official-links a{padding:10px 14px;background:var(--accent-deep);color:#fff;border-radius:999px;font-size:14px;font-weight:800;text-decoration:none}
+.ad-revenue{padding:22px;background:var(--accent-soft)}
+.ad-revenue ol{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.ad-revenue li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px}
+.ad-revenue li>span{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--accent-deep);color:#fff}
+.ad-revenue p{margin:3px 0 0;font-size:15px}
+.cafe-study{background:var(--primary-soft)}
+.cafe-study-label,.cafe-nav{font-size:14px;font-weight:850}
+.cafe-nav{margin:7px 0 12px}
+.cafe-study article{background:#fff;border:1px solid var(--line)}
+.cafe-study figure figcaption{padding:18px;background:var(--primary-deep);color:#fff;font-size:18px;font-weight:800}
+.cafe-study figure a{display:inline-block;margin-top:10px;padding:8px 12px;background:#fff;color:var(--primary-deep);border-radius:999px;text-decoration:none}
+.cafe-study article>section{padding:22px;border-top:1px solid var(--line)}
+.cafe-study h4{margin-bottom:9px}
+.occasion-list,.cafe-products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.occasion-list>span,.cafe-products>div{padding:12px;background:var(--accent-soft)}
+.cafe-products>div>strong,.cafe-products>div>span{display:block}
+.cafe-products>div>span{margin-top:6px;font-size:14px}
+.cafe-study ol{display:grid;gap:10px;padding:0;list-style:none}
+.cafe-study li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:10px}
+.cafe-study li>span{display:grid;place-items:center;width:32px;height:32px;background:var(--primary-deep);color:#fff;border-radius:50%}
+.cafe-study li p{margin:2px 0 0}
+.cafe-study article>footer{padding:22px;background:var(--primary-deep);color:#fff;text-align:center;font-weight:850}
+.closing{margin-top:84px;padding:44px 24px;background:var(--primary-deep);color:#fff}
+.closing>span{color:var(--accent-shape);font-size:13px;font-weight:900}
+.closing>p{color:#eef1f5}
+.actions{margin-top:30px;padding:22px;background:#fff;color:var(--ink)}
+.actions h3{margin-bottom:14px;color:var(--accent-text)}
+.actions ol{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.actions li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;align-items:center}
+.actions li>span{display:grid;place-items:center;width:34px;height:34px;background:var(--accent-shape);color:var(--accent-deep);border-radius:50%;font-weight:900}
+.closing-delivery-check .actions{border-left:8px solid var(--accent-shape)}
+.closing-job-ticket .actions{border:2px dashed var(--ink)}
+.closing-post-plan .actions{border-radius:28px}
+.closing-product-focus .actions{box-shadow:8px 8px 0 var(--accent-shape)}
+.closing-article-next .actions{border-left:14px double var(--accent-shape)}
+.closing-listing-check .actions{border-top:8px solid var(--accent-shape)}
+.closing-bundle-ready .actions{transform:rotate(-.3deg)}
+.closing-prompt-recipe .actions{background:var(--accent-soft)}
+.closing-automation-request .actions{border:2px solid var(--accent-shape)}
+.closing-next-scene .actions{border-radius:2px 30px 2px 30px}
+.book-footer{padding:30px 20px;text-align:center}
+.book-footer a{display:inline-block;padding:10px 15px;border-bottom:2px solid var(--primary-shape);color:var(--primary-text);font-weight:850;text-decoration:none}
+.index-cover{padding:56px 24px;background:var(--primary-deep);color:#fff}
+.index-cover>span{font-size:14px;color:var(--accent-shape);font-weight:850}
+.index-cover h1{margin:12px 0 0}
+.index-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;padding:24px}
+.index-card{display:block;border:1px solid var(--line);background:#fff;text-decoration:none}
+.index-card figure figcaption{padding:6px 10px}
+.index-card>div{padding:18px}
+.index-card>div>span{font-size:13px;color:var(--primary-text);font-weight:850}
+.index-card h2{margin:8px 0 16px;font-size:22px}
+.index-card b{font-size:14px;color:var(--accent-text)}
+.book-design-studio .chapter-atlas{background:linear-gradient(90deg,#fff 0 72%,var(--primary-soft) 72%)}
+.book-client-desk .chapter-workbench{border-left:14px solid var(--primary-soft)}
+.book-reel-editor .bench-head{border-radius:26px}
+.book-beauty-editorial .atlas-lede{border-top-style:double}
+.book-note-editorial .finish-path{background:linear-gradient(90deg,var(--wash),#fff)}
+.book-image-gallery .atlas-field{background:#fff}
+.book-template-workshop .bench-stream{border-left:2px dashed var(--primary-shape)}
+.book-gpt-lab .chapter-atlas{border-top:1px solid var(--ink)}
+.book-automation-control .chapter-workbench{background:var(--wash);padding:28px 0}
+.book-story-film .finish-heading{background:var(--primary-deep);color:#fff;padding:22px;border:0}
+[data-layout="design-board"],[data-layout="job-selection"],[data-layout="audience-map"],[data-layout="reward-equation"],[data-layout="research-spread"],[data-layout="usecase-gallery"],[data-layout="bundle-exploded"],[data-layout="prompt-anatomy"],[data-layout="setup-desk"],[data-layout="storyboard"]{--chapter-mark:var(--primary-shape)}
+[data-layout="revision-path"],[data-layout="proposal-pair"],[data-layout="reel-workbench"],[data-layout="product-angle-board"],[data-layout="article-build"],[data-layout="collection-workbench"],[data-layout="test-and-value"],[data-layout="output-revision"],[data-layout="automation-pipeline"],[data-layout="sound-and-film"]{--chapter-mark:var(--accent-shape)}
+[data-layout="page-study"],[data-layout="delivery-lane"],[data-layout="offer-path"],[data-layout="response-diagnosis"],[data-layout="publishing-set"],[data-layout="shop-listing"],[data-layout="sales-window"],[data-layout="reuse-library"],[data-layout="service-blueprint"],[data-layout="series-map"]{--chapter-mark:var(--accent-deep)}
+.chapter{border-top:2px solid var(--chapter-mark)}
+a:focus-visible{outline:3px solid var(--accent-shape);outline-offset:3px}
+
+.design-board-layout,.job-selection-layout,.audience-map-layout,.reward-equation-layout,.research-spread-layout,.usecase-gallery-layout,.bundle-exploded-layout,.prompt-anatomy-layout,.setup-desk-layout,.storyboard-layout,.revision-path-layout,.proposal-pair-layout,.reel-workbench-layout,.product-angle-layout,.article-build-layout,.collection-workbench-layout,.test-value-layout,.output-revision-layout,.automation-pipeline-layout,.sound-film-layout,.page-study-layout,.delivery-lane-layout,.offer-path-layout,.response-diagnosis-layout,.publishing-set-layout,.shop-listing-layout,.sales-window-layout,.reuse-library-layout,.service-blueprint-layout,.series-map-layout{display:grid;gap:26px}
+.design-board-layout,.page-study-layout,.proposal-pair-layout,.audience-map-layout,.reward-equation-layout,.product-angle-layout,.response-diagnosis-layout,.research-spread-layout,.usecase-gallery-layout,.shop-listing-layout,.bundle-exploded-layout,.test-value-layout,.sales-window-layout,.prompt-anatomy-layout,.output-revision-layout,.reuse-library-layout,.setup-desk-layout,.automation-pipeline-layout,.storyboard-layout,.sound-film-layout,.series-map-layout{grid-template-columns:repeat(2,minmax(0,1fr))}
+.revision-path-layout,.article-build-layout,.collection-workbench-layout,.series-map-layout{border-left:4px solid var(--accent-shape);padding-left:18px}
+.job-selection-layout,.sales-window-layout{border:2px solid var(--ink);padding:18px}
+.reel-workbench-layout,.sound-film-layout{padding:18px;background:var(--primary-deep);color:#fff}
+.edit-bench,.sound-track{padding:16px;background:#fff;color:var(--ink)}
+.delivery-lane-layout,.offer-path-layout,.service-blueprint-layout{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr)}
+.research-spread-layout{background:linear-gradient(90deg,#fff 0 50%,var(--primary-soft) 50%);padding:18px}
+.publishing-set-layout{padding:18px;border-top:8px solid var(--primary-shape)}
+.storyboard-layout{padding:18px;background:var(--primary-soft)}
+.scene-frames{border:5px solid var(--primary-deep);padding:12px}
+.fact-check,.known-unknown,.listing-improve,.work-problem,.missing-branch,.story-line,.sound-film-layout>footer,.page-delivery,.publishing-set-layout>aside{grid-column:1/-1}
+.proof-sheet,.broker-flow,.reward-math,.article-piece,.bundle-parts,.filled-sample,.prompt-parts,.input-table,.scene-frames{grid-column:1/-1}
+.filled-sample,.missing-branch,.buyer-caption{padding:16px;background:var(--accent-soft)}
+.production-source{padding:18px;background:var(--primary-deep);color:#fff;text-align:center}
+.production-pieces{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+.production-pieces>article{border:1px solid var(--line);background:#fff}
+.production-pieces header{padding:12px;background:var(--primary-soft);color:var(--primary-text);font-weight:850}
+.production-pieces article>p{padding:12px;margin:0;font-size:14px}
+.production-pieces article>div{padding:12px;border-top:3px solid var(--accent-shape)}
+.production-pieces article>div>small,.production-pieces article>div>strong,.production-pieces article>div>span{display:block}
+.production-pieces small{font-size:13px;color:var(--accent-text)}
+.production-pieces article>div>span{margin-top:5px;font-size:14px;line-height:1.65}
+.hierarchy-live .hierarchy-level-0 strong{font-size:clamp(28px,7vw,48px);line-height:1.25}
+.hierarchy-live .hierarchy-level-1 strong{font-size:22px}
+.hierarchy-live .hierarchy-level-2 strong{font-size:16px}
+.mobile-cell-label{display:none}
+.atlas-lede>b{color:var(--primary-text)}
+.finish-heading>b{color:var(--accent-text)}
+.cover>div{margin:0 20px;padding-top:24px}
+.cafe-banner>div{position:static;padding:18px;background:var(--primary-deep);color:#fff}
+.ai-answer,.human-note{color:var(--ink)}
+.bench-head>b,.closing>span,.index-cover>span,.income-method>header>span{color:var(--accent-on-dark)}
+.actions li>span{background:var(--accent-deep);color:#fff}
+.reel-workbench-layout>.script-strip,.reel-workbench-layout>.edit-bench,.reel-workbench-layout>.reel-tools,.sound-film-layout>.motion-track,.sound-film-layout>.sound-track,.sound-film-layout>.assembly-track{padding:16px;background:#fff;color:var(--ink)}
+.lesson-take,.source-example,.work-block,.income-block{color:var(--ink)}
+.book-story-film .finish-heading h2{color:#fff}
+.book-story-film .finish-heading>div>span,.book-story-film .finish-heading>b{color:var(--accent-on-dark)}
+
+@media(max-width:620px){.book{width:100%}
+.route-exchange ol,.route-image-shelf ol,.chapter-outline ol,.hub-rays,.reuse-branches,.value-chain,.scope-lane,.production-pieces{grid-template-columns:minmax(0,1fr)}
+.concern-design-concern{grid-template-columns:minmax(0,1fr)}
+.contrast-head{display:none}
+.contrast-row{grid-template-columns:minmax(82px,.7fr) minmax(0,1.3fr)}
+.contrast-row>div:last-child{grid-column:2}
+.contrast-row>div{border-left:1px solid var(--line);border-top:1px dashed var(--line)}
+.mobile-cell-label{display:block;margin-bottom:5px;color:var(--primary-text);font-size:13px;font-weight:850}
+.mapping-unit dl>div,.example-line,.tool-ledger>div,.income-method dl>div{grid-template-columns:minmax(0,1fr);gap:5px}
+.equation-strip{display:grid;grid-template-columns:minmax(0,1fr)}
+.math-sign{text-align:center}
+.audio-track{grid-template-columns:minmax(74px,.4fr) minmax(0,1fr)}
+.audio-track>span{grid-column:2}
+.two-work-paths,.format-pair,.occasion-list,.cafe-products{grid-template-columns:minmax(0,1fr)}
+.angle-board>div{grid-template-columns:minmax(0,1fr)}
+.voice-note ol{grid-template-columns:minmax(0,1fr)}
+.index-grid{grid-template-columns:minmax(0,1fr)}
+.atlas-lede{grid-template-columns:minmax(0,1fr) 54px}
+.atlas-lede>b{font-size:48px}
+.finish-heading>b{font-size:56px}
+.design-board-layout,.page-study-layout,.proposal-pair-layout,.audience-map-layout,.reward-equation-layout,.product-angle-layout,.response-diagnosis-layout,.research-spread-layout,.usecase-gallery-layout,.shop-listing-layout,.bundle-exploded-layout,.test-value-layout,.sales-window-layout,.prompt-anatomy-layout,.output-revision-layout,.reuse-library-layout,.setup-desk-layout,.automation-pipeline-layout,.storyboard-layout,.sound-film-layout,.series-map-layout,.delivery-lane-layout,.offer-path-layout,.service-blueprint-layout{grid-template-columns:minmax(0,1fr)}
+.fact-check,.known-unknown,.listing-improve,.work-problem,.missing-branch,.story-line,.sound-film-layout>footer,.page-delivery,.publishing-set-layout>aside{grid-column:auto}
+.research-spread-layout{background:var(--primary-soft)}
+}
+
+@media(max-width:359px){.cover>div,.income-overview,.concern,.media-stage,.chapter-outline,.atlas-lede,.bench-head,.finish-heading{margin-left:14px;margin-right:14px}
+.bench-stream,.finish-path{padding-left:14px;padding-right:14px}
+.atlas-field>section,.atlas-field>.cafe-study,.atlas-field>.work-block,.atlas-field>.income-block,.atlas-field>.angle-board,.atlas-field>.scope-blueprint,.atlas-field>.official-links{padding-left:16px;padding-right:16px}
+.concern-question,.ai-answer{padding:20px}
+.media-collection figure{grid-template-columns:minmax(0,1fr)}
+.media-collection img{grid-row:auto}
+}
+
+.design-examples{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:18px;align-items:start}
+.demo-label{margin-bottom:8px;color:var(--primary-text);font-size:14px;font-weight:850}
+.mini-lp{border:1px solid var(--line);background:#fff}
+.mini-nav{padding:10px 12px;font-size:13px;font-weight:800}
+.mini-lp>section{padding:16px}
+.mini-lp h3{margin-bottom:10px;font-size:20px}
+.mini-lp section>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.mini-lp section>div>span{padding:8px;background:var(--primary-soft);font-size:13px}
+.mini-lp section b{display:inline-block;margin-top:10px;color:var(--primary-text);font-size:14px}
+@media(max-width:620px){.design-examples{grid-template-columns:minmax(0,1fr)}
+}
+.document-transform{display:grid;grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr);gap:12px;align-items:start}.source-document,.finished-document{padding:18px;border:1px solid var(--line);background:#fff}.source-document{border-top:8px solid var(--primary-shape)}.finished-document{border-top:8px solid var(--accent-shape)}.document-transform h4{margin-bottom:12px}.document-transform dl{margin:0}.document-transform dl>div{padding:10px 0;border-top:1px solid var(--line)}.document-transform dt{color:var(--primary-text);font-size:13px;font-weight:850}.document-transform dd{margin:4px 0 0;font-size:15px}.document-arrow{align-self:center;color:var(--accent-text);font-size:27px;font-weight:900;text-align:center}
+.reel-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;border-top:5px solid var(--primary-deep);border-bottom:5px solid var(--primary-deep);padding:10px 0}.reel-strip>article{display:flex;min-width:0;flex-direction:column;border:1px solid var(--line);background:#fff}.reel-strip header{display:grid;grid-template-columns:28px minmax(0,1fr);align-items:center;background:var(--primary-deep);color:#fff}.reel-strip header>span{padding:8px;color:var(--accent-on-dark);font-size:13px}.reel-strip header>strong{padding:8px;border-left:1px solid rgba(255,255,255,.3);font-size:14px}.reel-strip article>p{flex:1;margin:0;padding:14px;font-size:14px}
+.broker-network{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:center}.broker-network>article{min-width:0;padding:16px;border:1px solid var(--line);background:#fff}.broker-network>article:not(:last-child){border-bottom:5px solid var(--primary-shape)}.broker-network>.broker-focus{padding:24px 16px;border:3px solid var(--accent-deep);background:var(--accent-soft)}.broker-network strong,.broker-network>article>span{display:block}.broker-network>article>span{margin-top:7px;font-size:14px;line-height:1.65}
+.reward-formula{display:grid;grid-template-columns:minmax(0,1fr) 28px minmax(0,1fr);gap:8px;align-items:stretch}.formula-input{padding:12px;background:var(--primary-soft);border-top:7px solid var(--primary-shape)}.formula-input>strong,.formula-input>span{display:block}.formula-input>span{margin-top:7px;font-size:14px;line-height:1.65}.reward-formula>b{align-self:center;color:var(--accent-text);font-size:25px;text-align:center}.reward-formula>.formula-equals{grid-column:1/-1}.reward-formula>.formula-result{grid-column:1/-1;padding:19px;background:var(--accent-deep);color:#fff;font-size:22px;font-weight:850;text-align:center}
+.set-preview{margin-bottom:16px;padding:10px;background:var(--wash)}.set-preview figcaption{padding-top:7px}.set-common{padding:18px;background:var(--primary-deep);color:#fff;text-align:center}.set-common>span,.set-common>strong{display:block}.set-common>span{font-size:13px;color:var(--accent-on-dark)}.image-specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px}.image-specs>article{padding:14px;border-top:6px solid var(--accent-shape);background:var(--accent-soft)}.image-specs header{font-weight:900}.image-specs p{margin:7px 0;font-size:14px}.image-specs strong{font-size:14px;line-height:1.6}
+.product-box{position:relative;padding:24px;border:3px solid var(--primary-deep);background:#fff;text-align:center}.bundle-papers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:18px}.bundle-papers>article{padding:16px;border:1px solid var(--line);border-top:7px solid var(--primary-shape);background:#fff}.bundle-papers>article:nth-child(2){border-top-color:var(--accent-shape)}.bundle-papers header{font-weight:900}.bundle-papers p{margin:7px 0 0;font-size:14px}.completed-form-unit table,.csv-report-unit table{width:100%;border-collapse:collapse;table-layout:fixed;background:#fff}.completed-form-unit th,.completed-form-unit td,.csv-report-unit th,.csv-report-unit td{padding:12px;border:1px solid var(--line);font-size:14px;line-height:1.6;text-align:left}.completed-form-unit thead th,.csv-report-unit thead th{background:var(--primary-deep);color:#fff}.completed-form-unit tbody th,.csv-report-unit tbody th{color:var(--primary-text);background:var(--primary-soft)}
+.brief-sheet{border:2px solid var(--primary-deep);background:#fff}.brief-sheet>header{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:12px;padding:15px;background:var(--primary-deep);color:#fff}.brief-sheet>header>span{font-size:13px;color:var(--accent-on-dark);font-weight:850}.brief-sheet dl{margin:0;padding:18px}.brief-sheet dl>div{display:grid;grid-template-columns:minmax(78px,.55fr) minmax(0,1.45fr);gap:14px;padding:13px 0;border-top:1px solid var(--line)}.brief-sheet dl>div:first-child{border-top:0}.brief-sheet dt{color:var(--primary-text);font-weight:900}.brief-sheet dd{margin:0;font-size:15px}
+.csv-pipeline{display:grid;grid-template-columns:minmax(0,1fr) minmax(92px,.36fr) minmax(0,1fr);gap:12px;align-items:start}.csv-pipeline>article{padding:14px;border:1px solid var(--line);background:#fff}.csv-pipeline h4{margin-bottom:10px}.csv-transform{align-self:center;display:grid;justify-items:center;gap:6px}.csv-arrow{color:var(--accent-text);font-size:27px;line-height:1;text-align:center}.csv-transform-label{color:var(--primary-text);font-size:13px;font-weight:850;line-height:1.5;text-align:center}.csv-total th,.csv-total td{border-top:4px solid var(--accent-shape);font-weight:900}.csv-output>.source-example{margin-top:14px}.branch-root{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:15px;background:var(--primary-deep);color:#fff}.branch-root>span{color:var(--accent-on-dark);font-size:13px;font-weight:850}.branch-paths{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:18px;margin-top:16px}.normal-path{padding:18px;border:2px solid var(--primary-shape);background:var(--primary-soft)}.normal-path>strong,.normal-path>span,.review-paths strong,.review-paths>article>span{display:block}.normal-path>span,.review-paths>article>span{margin-top:6px;font-size:14px;line-height:1.65}.review-paths{display:grid;gap:9px;border-left:5px solid var(--accent-shape);padding-left:14px}.review-paths>article{padding:13px;background:var(--accent-soft)}
+.story-scenes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.story-scenes>article{border:2px solid var(--primary-deep);background:#fff}.story-scenes>article>header{padding:7px 10px;background:var(--primary-deep);color:var(--accent-on-dark);font-size:13px;font-weight:900}.visual-layer,.narration-layer{padding:14px}.visual-layer{min-height:118px;background:var(--primary-soft)}.narration-layer{border-top:3px solid var(--accent-shape)}.visual-layer>small,.narration-layer>small{display:block;margin-bottom:7px;color:var(--primary-text);font-size:13px;font-weight:850}.visual-layer>strong{font-size:15px;line-height:1.65}.narration-layer>p{margin:0;font-size:14px}
+@media(max-width:620px){.document-transform{grid-template-columns:minmax(0,1fr)}.document-arrow{transform:rotate(90deg)}.reel-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.broker-network{grid-template-columns:minmax(0,1fr)}.reward-formula{grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr)}.image-specs,.bundle-papers{grid-template-columns:minmax(0,1fr)}.brief-sheet>header,.brief-sheet dl>div{grid-template-columns:minmax(0,1fr)}.csv-pipeline{grid-template-columns:minmax(0,1fr)}.csv-transform{justify-self:stretch}.csv-arrow{transform:rotate(90deg)}.branch-paths{grid-template-columns:minmax(0,1fr)}.story-scenes{grid-template-columns:minmax(0,1fr)}.story-scenes>article{display:grid;grid-template-columns:minmax(0,1fr)}.visual-layer{min-height:0}}
+@media(max-width:359px){.reel-strip{grid-template-columns:minmax(0,1fr)}.reward-formula{grid-template-columns:minmax(0,1fr) 20px minmax(0,1fr);gap:5px}.formula-input{padding:10px}.reward-formula>.formula-equals,.reward-formula>.formula-result{grid-column:1/-1}}
+</style></head><body><div class="book book-gpt-lab"><nav class="topbar" aria-label="特典ナビゲーション"><span><span class="phrase"><span class="unit">AI</span><wbr><span class="unit">マネタイズ</span></span></span><a href="index.html"><span class="phrase"><span class="unit">特典一覧</span></span></a></nav><header class="cover"><figure><img src="assets/cover-06.webp" alt="調べる。書く。画像まで作る。" width="1536" height="1024" fetchpriority="high"><figcaption><span class="phrase"><span class="unit">画像は</span><wbr><span class="unit">イメージです</span></span></figcaption></figure><div><span><span class="phrase"><span class="unit">GPT</span><wbr><span class="unit">攻略</span><wbr><span class="unit">バイブル</span></span></span><h1><span class="phrase"><span class="unit">調べる。</span><wbr><span class="unit">書く。</span></span><span class="phrase"><span class="unit">画像まで</span><wbr><span class="unit">作る。</span></span></h1></div></header><main><section class="income-overview route-input-output" id="income-route"><h2><span class="phrase"><span class="unit">作ったものを、</span></span><span class="phrase"><span class="unit">必要としている人へ。</span></span></h2><ol><li><span>1</span><div><strong><span class="phrase"><span class="unit">ChatGPTで</span><wbr><span class="unit">制作</span></span></strong><p><span class="phrase"><span class="unit">記事・</span><wbr><span class="unit">画像・</span><wbr><span class="unit">資料</span></span></p></div></li><li><span>2</span><div><strong><span class="phrase"><span class="unit">あなた</span></span></strong><p><span class="phrase"><span class="unit">商品・</span><wbr><span class="unit">納品物に</span><wbr><span class="unit">仕上げる</span></span></p></div></li><li><span>3</span><div><strong><span class="phrase"><span class="unit">読者・</span><wbr><span class="unit">依頼主</span></span></strong><p><span class="phrase"><span class="unit">記事代・</span><wbr><span class="unit">制作費を</span><wbr><span class="unit">払う</span></span></p></div></li></ol></section><section class="concern concern-chat-question" id="reader-pain"><div class="concern-question"><h2><span class="phrase"><span class="unit">ChatGPTを</span><wbr><span class="unit">使っているのに、</span></span><span class="phrase"><span class="unit">質問して</span><wbr><span class="unit">終わりに</span></span><span class="phrase"><span class="unit">なって</span><wbr><span class="unit">いませんか？</span></span></h2><p><span class="phrase"><span class="unit">仕事に</span><wbr><span class="unit">使える</span><wbr><span class="unit">答えにならない。</span></span></p><p><span class="phrase"><span class="unit">何を</span><wbr><span class="unit">頼めばいいか</span><wbr><span class="unit">分からない。</span></span></p></div><div class="ai-answer" id="ai-answer"><span><span class="phrase"><span class="unit">AIを</span><wbr><span class="unit">使うと</span></span></span><strong><span class="phrase"><span class="unit">材料と</span><wbr><span class="unit">作りたいものを</span><wbr><span class="unit">伝えると、</span></span><span class="phrase"><span class="unit">文章・</span><wbr><span class="unit">画像・</span><wbr><span class="unit">資料まで</span></span><span class="phrase"><span class="unit">作ることができます。</span></span></strong></div></section><section class="media-stage media-output-samples" id="visual"><h2><span class="phrase"><span class="unit">同じ</span><wbr><span class="unit">材料から、</span></span><span class="phrase"><span class="unit">文章も、</span><wbr><span class="unit">画像も。</span></span></h2><figure><img src="assets/body-06.webp" alt="同じ材料から、文章も、画像も。" width="1536" height="1024" loading="lazy"><div class="media-labels"><span><span class="phrase"><span class="unit">商品の</span><wbr><span class="unit">情報</span></span></span><span><span class="phrase"><span class="unit">紹介文</span></span></span><span><span class="phrase"><span class="unit">バナー</span><wbr><span class="unit">案</span></span></span></div><figcaption><span class="phrase"><span class="unit">画像は</span><wbr><span class="unit">イメージです</span></span></figcaption></figure></section><nav class="chapter-outline" aria-label="この特典で分かること"><strong><span class="phrase"><span class="unit">この</span><wbr><span class="unit">特典で</span><wbr><span class="unit">分かること</span></span></strong><ol><li><span>1</span><div><span class="phrase"><span class="unit">作りたいものと</span><wbr><span class="unit">指示</span></span></div></li><li><span>2</span><div><span class="phrase"><span class="unit">出力と</span><wbr><span class="unit">修正</span></span></div></li><li><span>3</span><div><span class="phrase"><span class="unit">確認して</span><wbr><span class="unit">次に</span><wbr><span class="unit">使う</span></span></div></li></ol></nav><section class="chapter chapter-atlas" id="chapter-brief" data-layout="prompt-anatomy" data-chapter="1"><header class="atlas-lede"><span><span class="phrase"><span class="unit">作りたいものと</span><wbr><span class="unit">指示</span></span></span><b>01</b><h2><span class="phrase"><span class="unit">指示には、</span></span><span class="phrase"><span class="unit">相手・</span><wbr><span class="unit">目的・</span><wbr><span class="unit">材料・</span><wbr><span class="unit">形を</span><wbr><span class="unit">入れる。</span></span></h2></header><div class="atlas-field"><div class="prompt-anatomy-layout"><aside class="output-choice"><section class="mapping-unit" data-learning-key="choose" data-presentation="decision-first"><h3 class="topic-title"><span class="phrase"><span class="unit">まず、</span><wbr><span class="unit">ChatGPTで</span></span><span class="phrase"><span class="unit">何を</span><wbr><span class="unit">作りたいかを</span><wbr><span class="unit">決める。</span></span></h3><p class="lesson-take"><span class="phrase"><span class="unit">同じ</span><wbr><span class="unit">ChatGPTでも、</span><wbr><span class="unit">作るものに</span><wbr><span class="unit">合わせて</span><wbr><span class="unit">材料と</span><wbr><span class="unit">機能を</span><wbr><span class="unit">変えます。</span></span></p><div class="mapping-legend"><span><span class="phrase"><span class="unit">欲しいもの</span></span></span><span><span class="phrase"><span class="unit">渡す</span><wbr><span class="unit">材料・</span><wbr><span class="unit">使う</span><wbr><span class="unit">機能</span></span></span></div><dl><div><dt><span class="phrase"><span class="unit">文章の</span><wbr><span class="unit">下書き</span></span></dt><dd><span aria-hidden="true">→</span><strong><span class="phrase"><span class="unit">メモと</span><wbr><span class="unit">読者を</span><wbr><span class="unit">渡す</span></span></strong></dd></div><div><dt><span class="phrase"><span class="unit">比較表</span></span></dt><dd><span aria-hidden="true">→</span><strong><span class="phrase"><span class="unit">調べる</span><wbr><span class="unit">条件を</span><wbr><span class="unit">決めて</span><wbr><span class="unit">検索</span></span></strong></dd></div><div><dt><span class="phrase"><span class="unit">説明画像</span></span></dt><dd><span aria-hidden="true">→</span><strong><span class="phrase"><span class="unit">見せたい</span><wbr><span class="unit">場面を</span><wbr><span class="unit">指定して</span><wbr><span class="unit">生成</span></span></strong></dd></div><div><dt><span class="phrase"><span class="unit">資料の</span><wbr><span class="unit">要約</span></span></dt><dd><span aria-hidden="true">→</span><strong><span class="phrase"><span class="unit">対象</span><wbr><span class="unit">ファイルを</span><wbr><span class="unit">添付して</span><wbr><span class="unit">整理</span></span></strong></dd></div></dl><aside class="source-example"><span class="example-tab"><span class="phrase"><span class="unit">カフェの</span><wbr><span class="unit">案内を</span><wbr><span class="unit">作るなら</span></span></span><div class="example-lines"><div class="example-line"><strong><span class="phrase"><span class="unit">材料</span></span></strong><div><span class="phrase"><span class="unit">コーヒー・</span><wbr><span class="unit">焼き菓子・</span><wbr><span class="unit">持ち帰り</span></span></div></div><div class="example-line"><strong><span class="phrase"><span class="unit">文章</span></span></strong><div><span class="phrase"><span class="unit">見出し・</span><wbr><span class="unit">短い</span><wbr><span class="unit">説明・</span><wbr><span class="unit">案内先</span></span></div></div><div class="example-line"><strong><span class="phrase"><span class="unit">画像</span></span></strong><div><span class="phrase"><span class="unit">カップと</span><wbr><span class="unit">焼き菓子の</span><wbr><span class="unit">バナー</span><wbr><span class="unit">案</span></span></div></div></div></aside></section></aside><div class="prompt-parts"><section class="prompt-brief-unit" data-learning-key="brief" data-presentation="annotated-brief"><article class="brief-sheet"><header><span><span class="phrase"><span class="unit">決めること</span></span></span><strong><span class="phrase"><span class="unit">カフェ</span><wbr><span class="unit">案内の</span><wbr><span class="unit">指定例</span></span></strong></header><dl><div><dt><span class="phrase"><span class="unit">誰に</span></span></dt><dd><span class="phrase"><span class="unit">近くで</span><wbr><span class="unit">働く</span><wbr><span class="unit">会社員</span></span></dd></div><div><dt><span class="phrase"><span class="unit">何を</span></span></dt><dd><span class="phrase"><span class="unit">持ち帰り</span><wbr><span class="unit">メニューを</span><wbr><span class="unit">紹介</span></span></dd></div><div><dt><span class="phrase"><span class="unit">材料</span></span></dt><dd><span class="phrase"><span class="unit">確定した</span><wbr><span class="unit">商品情報と</span><wbr><span class="unit">店の</span><wbr><span class="unit">写真</span></span></dd></div><div><dt><span class="phrase"><span class="unit">完成形</span></span></dt><dd><span class="phrase"><span class="unit">見出し・</span><wbr><span class="unit">短い</span><wbr><span class="unit">説明・</span><wbr><span class="unit">案内先</span></span></dd></div></dl></article><p class="lesson-take"><span class="phrase"><span class="unit">相手・</span><wbr><span class="unit">目的・</span><wbr><span class="unit">材料・</span><wbr><span class="unit">完成形がそろうと、</span><wbr><span class="unit">一般論から</span><wbr><span class="unit">具体的な</span><wbr><span class="unit">下書きへ</span><wbr><span class="unit">変わります。</span></span></p><aside class="source-example"><span class="example-tab"><span class="phrase"><span class="unit">曖昧な</span><wbr><span class="unit">依頼との</span><wbr><span class="unit">違い</span></span></span><div class="example-lines"><div class="example-line"><strong><span class="phrase"><span class="unit">いい</span><wbr><span class="unit">感じに書いて</span></span></strong><div><span class="phrase"><span class="unit">誰へ、</span><wbr><span class="unit">何を</span><wbr><span class="unit">伝えるかが</span><wbr><span class="unit">不明</span></span></div></div><div class="example-line"><strong><span class="phrase"><span class="unit">条件を</span><wbr><span class="unit">渡して</span><wbr><span class="unit">頼む</span></span></strong><div><span class="phrase"><span class="unit">必要な</span><wbr><span class="unit">内容と</span><wbr><span class="unit">形が</span><wbr><span class="unit">決まる</span></span></div></div><div class="example-line"><strong><span class="phrase"><span class="unit">情報が</span><wbr><span class="unit">足りない</span><wbr><span class="unit">時</span></span></strong><div><span class="phrase"><span class="unit">作り</span><wbr><span class="unit">始める</span><wbr><span class="unit">前に</span><wbr><span class="unit">質問して</span><wbr><span class="unit">もらう</span></span></div></div></div></aside></section></div><footer><section class="work-block"><h3><span class="phrase"><span class="unit">「何か</span><wbr><span class="unit">考えて」から、</span></span><span class="phrase"><span class="unit">相手・</span><wbr><span class="unit">目的・</span><wbr><span class="unit">材料・</span><wbr><span class="unit">形を</span><wbr><span class="unit">伝える。</span></span></h3><div class="tool-ledger"><div><strong><span class="phrase"><span class="unit">ChatGPT</span></span></strong><span><span class="phrase"><span class="unit">調べる・</span><wbr><span class="unit">書く・</span><wbr><span class="unit">画像</span></span></span></div><div><strong><span class="phrase"><span class="unit">Gemini</span></span></strong><span><span class="phrase"><span class="unit">同じ</span><wbr><span class="unit">材料で別案</span></span></span></div><div><strong><span class="phrase"><span class="unit">Canva</span></span></strong><span><span class="phrase"><span class="unit">見た目を</span><wbr><span class="unit">仕上げる</span></span></span></div></div><p class="human-note"><span class="phrase"><span class="unit">材料を</span><wbr><span class="unit">渡す・</span><wbr><span class="unit">内容を</span><wbr><span class="unit">選ぶ</span></span></p></section></footer></div></div></section><section class="chapter chapter-workbench" id="chapter-output" data-layout="output-revision" data-chapter="2"><div class="bench-head"><b>02</b><span><span class="phrase"><span class="unit">出力と</span><wbr><span class="unit">修正</span></span></span><h2><span class="phrase"><span class="unit">同じ</span><wbr><span class="unit">商品情報から、</span></span><span class="phrase"><span class="unit">紹介文と</span><wbr><span class="unit">画像の</span><wbr><span class="unit">案を</span><wbr><span class="unit">作る。</span></span></h2></div><div class="bench-stream"><div class="output-revision-layout"><div class="same-source"><section class="process-unit" data-learning-key="same-material" data-presentation="process-integrated"><ol><li><span class="step-index">01</span><div><strong><span class="phrase"><span class="unit">伝えること</span></span></strong><p><span class="phrase"><span class="unit">仕事の</span><wbr><span class="unit">合間に、</span><wbr><span class="unit">コーヒーと</span><wbr><span class="unit">焼き菓子</span></span></p></div></li><li><span class="step-index">02</span><div><strong><span class="phrase"><span class="unit">画像の</span><wbr><span class="unit">案</span></span></strong><p><span class="phrase"><span class="unit">白い</span><wbr><span class="unit">カップと</span><wbr><span class="unit">焼き菓子を</span><wbr><span class="unit">大きく</span></span></p></div></li><li><span class="step-index">03</span><div><strong><span class="phrase"><span class="unit">文字の</span><wbr><span class="unit">場所</span></span></strong><p><span class="phrase"><span class="unit">見出しを</span><wbr><span class="unit">置く</span><wbr><span class="unit">余白を</span><wbr><span class="unit">残す</span></span></p></div></li><li><span class="step-index">04</span><div><strong><span class="phrase"><span class="unit">仕上げ</span></span></strong><p><span class="phrase"><span class="unit">商品情報と</span><wbr><span class="unit">見出しをそろえる</span></span></p></div></li></ol><aside class="source-example"><span class="example-tab"><span class="phrase"><span class="unit">同じ</span><wbr><span class="unit">材料を</span><wbr><span class="unit">使える</span><wbr><span class="unit">場面</span></span></span><div class="example-lines"><div class="example-line"><strong><span class="phrase"><span class="unit">紹介文</span></span></strong><div><span class="phrase"><span class="unit">商品の</span><wbr><span class="unit">特徴を</span><wbr><span class="unit">短くまとめる</span></span></div></div><div class="example-line"><strong><span class="phrase"><span class="unit">バナー</span></span></strong><div><span class="phrase"><span class="unit">見る人と</span><wbr><span class="unit">商品の</span><wbr><span class="unit">関係を</span><wbr><span class="unit">見せる</span></span></div></div><div class="example-line"><strong><span class="phrase"><span class="unit">SNS</span><wbr><span class="unit">投稿</span></span></strong><div><span class="phrase"><span class="unit">紹介文の</span><wbr><span class="unit">具体例を</span><wbr><span class="unit">抜き出す</span></span></div></div></div></aside><p class="lesson-take"><span class="phrase"><span class="unit">文章と</span><wbr><span class="unit">画像を</span><wbr><span class="unit">別々に</span><wbr><span class="unit">考えず、</span><wbr><span class="unit">同じ</span><wbr><span class="unit">商品・</span><wbr><span class="unit">同じ</span><wbr><span class="unit">読者にそろえます。</span></span></p></section></div><aside class="revision-order"><section class="mapping-unit" data-learning-key="revise" data-presentation="process-integrated"><h3 class="topic-title"><span class="phrase"><span class="unit">直したい</span><wbr><span class="unit">箇所と</span><wbr><span class="unit">理由を、</span></span><span class="phrase"><span class="unit">具体的に</span><wbr><span class="unit">伝える。</span></span></h3><div class="mapping-legend"><span><span class="phrase"><span class="unit">困った</span><wbr><span class="unit">出力</span></span></span><span><span class="phrase"><span class="unit">次の</span><wbr><span class="unit">指示</span></span></span></div><dl><div><dt><span class="phrase"><span class="unit">抽象的すぎる</span></span></dt><dd><span aria-hidden="true">→</span><strong><span class="phrase"><span class="unit">この</span><wbr><span class="unit">商品の</span><wbr><span class="unit">使用例を</span><wbr><span class="unit">加えて</span></span></strong></dd></div><div><dt><span class="phrase"><span class="unit">自分の</span><wbr><span class="unit">文体と</span><wbr><span class="unit">違う</span></span></dt><dd><span aria-hidden="true">→</span><strong><span class="phrase"><span class="unit">渡した</span><wbr><span class="unit">文章の</span><wbr><span class="unit">言い回しに</span><wbr><span class="unit">合わせて</span></span></strong></dd></div><div><dt><span class="phrase"><span class="unit">勝手な</span><wbr><span class="unit">情報がある</span></span></dt><dd><span aria-hidden="true">→</span><strong><span class="phrase"><span class="unit">材料にないことを</span><wbr><span class="unit">分けて、</span><wbr><span class="unit">質問して</span></span></strong></dd></div><div><dt><span class="phrase"><span class="unit">同じ</span><wbr><span class="unit">話が</span><wbr><span class="unit">長い</span></span></dt><dd><span aria-hidden="true">→</span><strong><span class="phrase"><span class="unit">説明は</span><wbr><span class="unit">残して、</span><wbr><span class="unit">重複をまとめて</span></span></strong></dd></div></dl><aside class="source-example"><span class="example-tab"><span class="phrase"><span class="unit">修正依頼の</span><wbr><span class="unit">具体例</span></span></span><div class="example-lines"><div class="example-line"><strong><span class="phrase"><span class="unit">違う</span><wbr><span class="unit">箇所</span></span></strong><div><span class="phrase"><span class="unit">店の</span><wbr><span class="unit">紹介が</span><wbr><span class="unit">先に</span><wbr><span class="unit">来ている</span></span></div></div><div class="example-line"><strong><span class="phrase"><span class="unit">変えたい</span><wbr><span class="unit">理由</span></span></strong><div><span class="phrase"><span class="unit">持ち帰りの</span><wbr><span class="unit">案内を</span><wbr><span class="unit">先に</span><wbr><span class="unit">伝えたい</span></span></div></div><div class="example-line"><strong><span class="phrase"><span class="unit">頼み方</span></span></strong><div><span class="phrase"><span class="unit">商品</span><wbr><span class="unit"> </span><wbr><span class="unit">→</span><wbr><span class="unit"> </span><wbr><span class="unit">使う</span><wbr><span class="unit">場面</span><wbr><span class="unit"> </span><wbr><span class="unit">→</span><wbr><span class="unit"> </span><wbr><span class="unit">店の</span><wbr><span class="unit">順にして</span></span></div></div></div></aside><p class="lesson-take"><span class="phrase"><span class="unit">直す</span><wbr><span class="unit">条件を</span><wbr><span class="unit">一つずつ</span><wbr><span class="unit">示すと、</span><wbr><span class="unit">元の</span><wbr><span class="unit">良さを</span><wbr><span class="unit">残したまま</span><wbr><span class="unit">調整しやすく</span><wbr><span class="unit">なります。</span></span></p></section></aside></div></div></section><section class="chapter chapter-finish" id="chapter-reuse" data-layout="reuse-library" data-chapter="3"><header class="finish-heading"><div><span><span class="phrase"><span class="unit">確認して</span><wbr><span class="unit">次に</span><wbr><span class="unit">使う</span></span></span><h2><span class="phrase"><span class="unit">うまくいった</span><wbr><span class="unit">指示を</span><wbr><span class="unit">残し、</span></span><span class="phrase"><span class="unit">次の</span><wbr><span class="unit">仕事でも</span><wbr><span class="unit">使う。</span></span></h2></div><b>03</b></header><div class="finish-path"><div class="reuse-library-layout"><div class="source-check"><section class="mapping-unit" data-learning-key="check" data-presentation="reference-last"><h3 class="topic-title"><span class="phrase"><span class="unit">完成した</span><wbr><span class="unit">内容を、</span></span><span class="phrase"><span class="unit">元の</span><wbr><span class="unit">情報と</span><wbr><span class="unit">見比べる。</span></span></h3><div class="mapping-legend"><span><span class="phrase"><span class="unit">完成物で</span><wbr><span class="unit">見る</span><wbr><span class="unit">所</span></span></span><span><span class="phrase"><span class="unit">照らし</span><wbr><span class="unit">合わせる</span><wbr><span class="unit">材料</span></span></span></div><dl><div><dt><span class="phrase"><span class="unit">商品名・</span><wbr><span class="unit">数字</span></span></dt><dd><span aria-hidden="true">→</span><strong><span class="phrase"><span class="unit">支給された</span><wbr><span class="unit">情報</span></span></strong></dd></div><div><dt><span class="phrase"><span class="unit">紹介の</span><wbr><span class="unit">内容</span></span></dt><dd><span aria-hidden="true">→</span><strong><span class="phrase"><span class="unit">元の</span><wbr><span class="unit">特徴・</span><wbr><span class="unit">使う</span><wbr><span class="unit">場面</span></span></strong></dd></div><div><dt><span class="phrase"><span class="unit">画像と</span><wbr><span class="unit">ファイル</span></span></dt><dd><span aria-hidden="true">→</span><strong><span class="phrase"><span class="unit">実際に</span><wbr><span class="unit">開いた</span><wbr><span class="unit">表示</span></span></strong></dd></div></dl><p class="lesson-take"><span class="phrase"><span class="unit">文章の</span><wbr><span class="unit">下書きと、</span><wbr><span class="unit">事実の</span><wbr><span class="unit">確認を</span><wbr><span class="unit">分けると、</span><wbr><span class="unit">仕事に</span><wbr><span class="unit">使える</span><wbr><span class="unit">形へ</span><wbr><span class="unit">近づきます。</span></span></p><aside class="source-example"><span class="example-tab"><span class="phrase"><span class="unit">一つ</span><wbr><span class="unit">前の</span><wbr><span class="unit">商品を</span><wbr><span class="unit">使い</span><wbr><span class="unit">回す</span><wbr><span class="unit">時</span></span></span><div class="example-lines"><div class="example-line"><strong><span class="phrase"><span class="unit">残す</span></span></strong><div><span class="phrase"><span class="unit">文章の</span><wbr><span class="unit">順番と</span><wbr><span class="unit">見た目</span></span></div></div><div class="example-line"><strong><span class="phrase"><span class="unit">差し替える</span></span></strong><div><span class="phrase"><span class="unit">新しい</span><wbr><span class="unit">商品情報</span></span></div></div><div class="example-line"><strong><span class="phrase"><span class="unit">見直す</span></span></strong><div><span class="phrase"><span class="unit">前の</span><wbr><span class="unit">商品名や</span><wbr><span class="unit">条件が</span><wbr><span class="unit">残っていないか</span></span></div></div></div></aside></section></div><aside class="saved-instruction"><section class="reuse-unit" data-learning-key="reuse"><div class="reuse-source"><span><span class="phrase"><span class="unit">共通で</span><wbr><span class="unit">残す</span></span></span><strong><span class="phrase"><span class="unit">読者・</span><wbr><span class="unit">目的・</span><wbr><span class="unit">文体・</span><wbr><span class="unit">完成形・</span><wbr><span class="unit">確認項目</span></span></strong></div><div class="reuse-branches"><div><strong><span class="phrase"><span class="unit">商品</span><wbr><span class="unit">A</span></span></strong><p><span class="phrase"><span class="unit">コーヒーと</span><wbr><span class="unit">焼き菓子</span></span><span class="variant-arrow" aria-hidden="true">→</span><b><span class="phrase"><span class="unit">持ち帰り</span><wbr><span class="unit">案内へ</span></span></b></p></div><div><strong><span class="phrase"><span class="unit">商品</span><wbr><span class="unit">B</span></span></strong><p><span class="phrase"><span class="unit">季節の</span><wbr><span class="unit">飲み物</span></span><span class="variant-arrow" aria-hidden="true">→</span><b><span class="phrase"><span class="unit">同じ</span><wbr><span class="unit">形の</span><wbr><span class="unit">紹介文へ</span></span></b></p></div><div><strong><span class="phrase"><span class="unit">商品</span><wbr><span class="unit">C</span></span></strong><p><span class="phrase"><span class="unit">ギフト用の</span><wbr><span class="unit">セット</span></span><span class="variant-arrow" aria-hidden="true">→</span><b><span class="phrase"><span class="unit">同じ</span><wbr><span class="unit">形の</span><wbr><span class="unit">バナー</span><wbr><span class="unit">案へ</span></span></b></p></div></div><p class="lesson-take"><span class="phrase"><span class="unit">毎回</span><wbr><span class="unit">ゼロから</span><wbr><span class="unit">頼まず、</span><wbr><span class="unit">文体と</span><wbr><span class="unit">完成形は</span><wbr><span class="unit">残して、</span><wbr><span class="unit">新しい</span><wbr><span class="unit">材料へ</span><wbr><span class="unit">差し替えます。</span></span></p><aside class="source-example"><span class="example-tab"><span class="phrase"><span class="unit">保存しておくもの</span></span></span><div class="example-lines"><div class="example-line"><strong><span class="phrase"><span class="unit">指示</span></span></strong><div><span class="phrase"><span class="unit">誰に、</span><wbr><span class="unit">何を、</span><wbr><span class="unit">どんな</span><wbr><span class="unit">形で</span></span></div></div><div class="example-line"><strong><span class="phrase"><span class="unit">見本</span></span></strong><div><span class="phrase"><span class="unit">自分が</span><wbr><span class="unit">良いと</span><wbr><span class="unit">判断した</span><wbr><span class="unit">完成例</span></span></div></div><div class="example-line"><strong><span class="phrase"><span class="unit">差し替え</span><wbr><span class="unit">箇所</span></span></strong><div><span class="phrase"><span class="unit">商品名・</span><wbr><span class="unit">特徴・</span><wbr><span class="unit">案内先</span></span></div></div></div></aside></section></aside><footer><section class="income-block" id="income-modes"><h3><span class="phrase"><span class="unit">ChatGPTの</span><wbr><span class="unit">使い方を、</span></span><span class="phrase"><span class="unit">こんな</span><wbr><span class="unit">仕事に</span><wbr><span class="unit">生かせます。</span></span></h3><p><span class="phrase"><span class="unit">質問への</span><wbr><span class="unit">答えを</span><wbr><span class="unit">もらうだけでは、</span><wbr><span class="unit">収入にはなりません。</span><wbr><span class="unit">売るのは、</span><wbr><span class="unit">相手に</span><wbr><span class="unit">渡す</span><wbr><span class="unit">文章・</span><wbr><span class="unit">画像・</span><wbr><span class="unit">資料です。</span></span></p><div class="income-methods"><article class="income-method"><header><span>01</span><h4><span class="phrase"><span class="unit">商品紹介文を</span><wbr><span class="unit">作る</span></span></h4></header><div class="value-chain"><div><small><span class="phrase"><span class="unit">依頼する人</span><wbr><span class="unit">／</span><wbr><span class="unit">支払元</span></span></small><strong><span class="phrase"><span class="unit">商品を</span><wbr><span class="unit">紹介したいお</span><wbr><span class="unit">店や</span><wbr><span class="unit">会社</span></span></strong></div><div><small><span class="phrase"><span class="unit">作るもの</span></span></small><strong><span class="phrase"><span class="unit">見出し・</span><wbr><span class="unit">商品説明文</span></span></strong></div><div><small><span class="phrase"><span class="unit">報酬の</span><wbr><span class="unit">条件</span></span></small><strong><span class="phrase"><span class="unit">依頼された</span><wbr><span class="unit">原稿の</span><wbr><span class="unit">納品・</span><wbr><span class="unit">検収後に</span><wbr><span class="unit">制作費</span></span></strong></div></div><dl><div><dt><span class="phrase"><span class="unit">探す</span><wbr><span class="unit">場所</span></span></dt><dd><span class="phrase"><span class="unit">クラウドワークスなどの</span><wbr><span class="unit">原稿募集</span></span></dd></div><div><dt><span class="phrase"><span class="unit">なぜ</span><wbr><span class="unit">相手が</span><wbr><span class="unit">お金を</span><wbr><span class="unit">払うか</span></span></dt><dd><span class="phrase"><span class="unit">商品の</span><wbr><span class="unit">特徴を、</span><wbr><span class="unit">読む人に</span><wbr><span class="unit">伝わる</span><wbr><span class="unit">文章へ</span><wbr><span class="unit">変えたい</span></span></dd></div><div><dt><span class="phrase"><span class="unit">具体例</span></span></dt><dd><span class="phrase"><span class="unit">カフェの</span><wbr><span class="unit">商品情報から、</span><wbr><span class="unit">持ち帰りの</span><wbr><span class="unit">紹介文を</span><wbr><span class="unit">作る。</span></span></dd></div></dl></article><article class="income-method"><header><span>02</span><h4><span class="phrase"><span class="unit">告知画像を</span><wbr><span class="unit">作る</span></span></h4></header><div class="value-chain"><div><small><span class="phrase"><span class="unit">依頼する人</span><wbr><span class="unit">／</span><wbr><span class="unit">支払元</span></span></small><strong><span class="phrase"><span class="unit">商品の</span><wbr><span class="unit">告知画像が</span><wbr><span class="unit">必要なお</span><wbr><span class="unit">店</span></span></strong></div><div><small><span class="phrase"><span class="unit">作るもの</span></span></small><strong><span class="phrase"><span class="unit">文字と</span><wbr><span class="unit">画像を</span><wbr><span class="unit">整えた</span><wbr><span class="unit">告知</span><wbr><span class="unit">バナー</span></span></strong></div><div><small><span class="phrase"><span class="unit">報酬の</span><wbr><span class="unit">条件</span></span></small><strong><span class="phrase"><span class="unit">合意した</span><wbr><span class="unit">告知画像を</span><wbr><span class="unit">納品して</span><wbr><span class="unit">制作費</span></span></strong></div></div><dl><div><dt><span class="phrase"><span class="unit">探す</span><wbr><span class="unit">場所</span></span></dt><dd><span class="phrase"><span class="unit">クラウドワークスなどの、</span><wbr><span class="unit">AI</span><wbr><span class="unit">利用を</span><wbr><span class="unit">認める</span><wbr><span class="unit">バナー</span><wbr><span class="unit">募集</span></span></dd></div><div><dt><span class="phrase"><span class="unit">なぜ</span><wbr><span class="unit">相手が</span><wbr><span class="unit">お金を</span><wbr><span class="unit">払うか</span></span></dt><dd><span class="phrase"><span class="unit">告知に</span><wbr><span class="unit">使える</span><wbr><span class="unit">見た目へ</span><wbr><span class="unit">仕上げてほしい</span></span></dd></div><div><dt><span class="phrase"><span class="unit">具体例</span></span></dt><dd><span class="phrase"><span class="unit">同じ</span><wbr><span class="unit">カフェ</span><wbr><span class="unit">情報で</span><wbr><span class="unit">画像案を</span><wbr><span class="unit">作り、</span><wbr><span class="unit">Canvaで</span><wbr><span class="unit">文字を</span><wbr><span class="unit">配置する。</span></span></dd></div></dl></article><article class="income-method"><header><span>03</span><h4><span class="phrase"><span class="unit">説明資料を</span><wbr><span class="unit">作る</span></span></h4></header><div class="value-chain"><div><small><span class="phrase"><span class="unit">依頼する人</span><wbr><span class="unit">／</span><wbr><span class="unit">支払元</span></span></small><strong><span class="phrase"><span class="unit">商品や</span><wbr><span class="unit">業務を</span><wbr><span class="unit">説明したい</span><wbr><span class="unit">担当者</span></span></strong></div><div><small><span class="phrase"><span class="unit">作るもの</span></span></small><strong><span class="phrase"><span class="unit">説明資料・</span><wbr><span class="unit">手順書</span></span></strong></div><div><small><span class="phrase"><span class="unit">報酬の</span><wbr><span class="unit">条件</span></span></small><strong><span class="phrase"><span class="unit">決めた</span><wbr><span class="unit">内容の</span><wbr><span class="unit">資料を</span><wbr><span class="unit">納品して</span><wbr><span class="unit">制作費</span></span></strong></div></div><dl><div><dt><span class="phrase"><span class="unit">探す</span><wbr><span class="unit">場所</span></span></dt><dd><span class="phrase"><span class="unit">会社の</span><wbr><span class="unit">資料作成募集・</span><wbr><span class="unit">直接の</span><wbr><span class="unit">相談</span></span></dd></div><div><dt><span class="phrase"><span class="unit">なぜ</span><wbr><span class="unit">相手が</span><wbr><span class="unit">お金を</span><wbr><span class="unit">払うか</span></span></dt><dd><span class="phrase"><span class="unit">メモや</span><wbr><span class="unit">資料を、</span><wbr><span class="unit">相手が</span><wbr><span class="unit">読める</span><wbr><span class="unit">順番にしたい</span></span></dd></div><div><dt><span class="phrase"><span class="unit">具体例</span></span></dt><dd><span class="phrase"><span class="unit">渡された</span><wbr><span class="unit">業務</span><wbr><span class="unit">メモを</span><wbr><span class="unit">整理し、</span><wbr><span class="unit">見出し・</span><wbr><span class="unit">手順・</span><wbr><span class="unit">確認先をそろえる。</span></span></dd></div></dl></article></div></section></footer></div></div></section><section class="closing closing-prompt-recipe" id="final-point"><span><span class="phrase"><span class="unit">押さえるべき</span><wbr><span class="unit">ポイント</span><wbr><span class="unit">1</span><wbr><span class="unit">選</span></span></span><h2><span class="phrase"><span class="unit">ChatGPTで</span><wbr><span class="unit">作ったものを、</span></span><span class="phrase"><span class="unit">必要とする人へ</span><wbr><span class="unit">届ける。</span></span></h2><p><span class="phrase"><span class="unit">何を</span><wbr><span class="unit">頼むか</span><wbr><span class="unit">だけでなく、</span><wbr><span class="unit">誰に</span><wbr><span class="unit">何を</span><wbr><span class="unit">渡す</span><wbr><span class="unit">仕事なのかを</span><wbr><span class="unit">決める。</span><wbr><span class="unit">そこから</span><wbr><span class="unit">必要な</span><wbr><span class="unit">指示を</span><wbr><span class="unit">考える。</span></span></p><div class="actions"><h3><span class="phrase"><span class="unit">最初の</span><wbr><span class="unit">アクション</span></span></h3><ol><li><span>1</span><strong><span class="phrase"><span class="unit">まず、</span><wbr><span class="unit">ChatGPTで</span></span><span class="phrase"><span class="unit">何を</span><wbr><span class="unit">作りたいかを</span><wbr><span class="unit">決める。</span></span></strong></li><li><span>2</span><strong><span class="phrase"><span class="unit">指示には、</span></span><span class="phrase"><span class="unit">相手・</span><wbr><span class="unit">目的・</span><wbr><span class="unit">材料・</span><wbr><span class="unit">形を</span><wbr><span class="unit">入れる。</span></span></strong></li><li><span>3</span><strong><span class="phrase"><span class="unit">完成した</span><wbr><span class="unit">内容を、</span></span><span class="phrase"><span class="unit">元の</span><wbr><span class="unit">情報と</span><wbr><span class="unit">見比べる。</span></span></strong></li></ol></div></section></main><footer class="book-footer"><a href="index.html"><span class="phrase"><span class="unit">ほかの</span><wbr><span class="unit">特典も</span><wbr><span class="unit">チェック</span><wbr><span class="unit"> </span><wbr><span class="unit">↗</span></span></a></footer></div></body></html>
